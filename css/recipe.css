@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    scrollbar-gutter: stable;
+}
+
+:root {
+    --blue-primary: #00198d;
+    --dark-blue: #00082a;
+    --light-blue: #b3badd;
+    --yellow-primary: #ed9801;
+    --red-primary: #c80b19;
+    --light-yellow: #eac984;
+    --dark-yellow: #805202;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--yellow-primary);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+} 
+
+.grid-2-cols  {
+    grid-template-columns: 2fr 1fr;
+}
+
+/*--Header--*/
+.backBtn {
+    background-color: #2f1e00;
+    border-radius: 0.5rem;
+    width: fit-content;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backBtn-arrow {
+    font-size: 1.5rem;
+    color: var(--yellow-primary);
+    text-decoration: none;
+}
+
+/*--Recipe--*/
+
+/* .recipe {
+    width: 100%;
+}; */
+
+.left-side {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem 0rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.top-left-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #2f1e00;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--yellow-primary);
+    justify-content: center;
+    padding: 1rem;
+}
+
+.top-left-section-banners {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.tls-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--yellow-primary);
+    width: fit-content;
+    color: #2f1e00;
+    border-radius: 1rem;
+    padding: 0.3rem 1rem;
+}
+
+.tls-icon {
+    font-size: 1.5rem;
+}
+
+.bottom-left-section {
+    background-color: #2f1e00;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: var(--yellow-primary);
+}
+
+.recipe-banner {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.recipe-banner li {
+    background-color: var(--dark-yellow);
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    font-size: 0.6rem;
+    color: var(--light-yellow);
+}
+
+.recipe-quickfacts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: 75%;
+}
+
+.recipe-quickfact {
+    background-color: var(--dark-yellow);
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    width: fit-content;
+    border-radius: 0.4rem;
+}
+
+.quickfact-title {
+    font-weight: 600;
+    color: var(--yellow-primary)
+}
+
+.quickfact {
+    text-align: center;
+    color: var(--light-yellow);
+}
+
+.recipe-steps {
+  counter-reset: item;
+  padding-left: 0;
+}
+
+.recipe-steps li {
+  list-style: none;
+  counter-increment: item;
+
+  display: flex;
+  align-items: flex-start; /* ✅ KEY FIX */
+
+  gap: 12px; /* cleaner spacing */
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.recipe-steps li::before {
+  content: counter(item);
+
+  background-color: var(--dark-yellow);
+  color: var(--yellow-primary);
+
+  min-width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  font-weight: bold;
+
+  flex-shrink: 0; /* ✅ prevents squishing */
+}
+
+.right-side {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0rem 0rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.right-top-section {
+    padding: 1rem;
+    background-color: #2f1e00;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+.right-top-section img {
+    width: 100%;
+    height: 240px;
+    border-radius: 0.5rem;
+}
+.right-middle-section {
+    background-color: #2f1e00;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: var(--yellow-primary);
+    height: fit-content;
+}
+
+.right-middle-section-heading {
+    margin-bottom: 1rem;
+}
+
+.ingredients-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.ingredients-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.right-bottom-section {
+    background-color: #2f1e00;
+    color: var(--yellow-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product-right-bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    color: var(--yellow-primary)
+}
+
+.product-right-bottom-section-image {
+    padding: 0.2rem;
+}
+
+.product-right-bottom-section-image img {
+    height: 50px;
+    width: 50px;
+}
+
+.price-and-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.atc {
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    color: var(--yellow-primary);
+    background-color: #2f1e00;
+    border: 1px solid var(--yellow-primary);
+    font-weight: 550;
+    transition: all .3s ease-in-out;
+}
+
+.atc:hover {
+    background-color: var(--yellow-primary);
+    color: #2f1e00;
+}
