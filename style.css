@@ -240,22 +240,6 @@ header {
     gap: 2rem;
 }
 
-.hero-banner {
-    background-color: var(--blue-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-    width: 35%;
-    border-radius: 4rem;
-}
-
-.hero-banner-text {
-    font-weight: 700;
-    color: white;
-    font-size: clamp(1rem, 1rem + 0vw, 1rem);
-}
-
 .hero-headings {
     line-height: 1;
 }
