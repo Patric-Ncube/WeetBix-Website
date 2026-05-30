@@ -534,7 +534,7 @@ header {
 
 .purchase-modal {
     position: fixed;
-    margin: 0 auto;
+    margin: 0 auto; 
     height: fit-content;
     width: 650px;
     background-color: #2f1e00;
@@ -1307,7 +1307,7 @@ footer {
 .footer-logo {
     height: 50px;
     width: 100px;
-    background-image: url(/images/logos/Bokomo\ and\ Weetbix\ logo.png);
+    background-image: url(../images/logos/Bokomo\ and\ Weetbix\ logo.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
